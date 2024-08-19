@@ -5,35 +5,26 @@ import { Link } from "react-router-dom";
 export function SignUpValidation() {
     const logo = <img src={emailValidation} alt="로고" width={120} height={120}></img>;
     return (
-        <section className="flex justify-center">
-            <div className="w-full lg:w-3/5 mt-24">
+        <section className="flex h-screen items-center justify-center ">
+            <div className="justify-center items-center">
                 <div className="text-center">
-                    <Typography variant="h2" className="font-bold mb-4">
-                        이메일 주소를 인증해주세요.
-                    </Typography>
+                    <Typography className="font-semibold text-4xl">이메일 주소를 인증해주세요</Typography>
                 </div>
-                <form className="flex flex-col mt-8 mb-2 mx-auto w-96 max-w-screen-lg ">
-                    <div className="mb-1 flex flex-col gap-4 items-center">
+                <form className="mt-[85px] mx-auto">
+                    <div className="flex flex-col items-center">
                         {logo}
-                        <Typography variant="small" color="gray" className="-mb-3 font-medium" align="center">
-                            이메일 인증을 위한 메일이 발송 되었습니다.
-                            <br />
-                            회원가입 완료를 위한 이메일 인증을 진행 해 주세요.
-                            <br />
-                            <br />
-                            {/* 가입 이메일 주소 : ${} */}
-                            <Typography variant="big" color="black" className="-mb-3 font-bold" align="center">
-                                가입 이메일 주소 : name@email.com
+                        <Typography className="text-[#777777] mt-[30px] font-medium text-2xl font-semibold" align="center">
+                            관리자에게 이메일 인증을 위한 메일이 발송 되었습니다. <br />
+                            <Typography color="black" className="mt-[34px] mb-[34px] font-bold text-[28px] underline	" align="center">
+                                가입 계정 : name@email.com
                             </Typography>
-                            <br />
-                            <br />
-                            이메일이 올바르게 도착하지 않은 경우
-                            <br />
-                            하단에 '이메일 다시 보내기' 버튼을 클릭해주세요.
+                            <Typography className=" text-2xl font-semibold	 " align="center">
+                                검토 후, 승인 완료 시 서비스 이용이 가능하며
+                                <Typography className="text-2xl mt-[20px] font-semibold	" align="center">
+                                    가입 한 계정주소로 안내 해 드립니다.
+                                </Typography>
+                            </Typography>
                         </Typography>
-                        <Button className="mt-6 " fullWidth>
-                            이메일 다시 보내기
-                        </Button>
                     </div>
                 </form>
             </div>

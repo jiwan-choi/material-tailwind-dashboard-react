@@ -1,6 +1,6 @@
 import { HomeIcon, UserCircleIcon, TableCellsIcon, InformationCircleIcon, ServerStackIcon, RectangleStackIcon } from "@heroicons/react/24/solid";
 import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
-import { SignIn, SignUp, SignUpValidation, ForgotPassword, ForgotPasswordValidation } from "@/pages/auth";
+import { SignIn, SignUp, SignUpValidation, ForgotPassword, ForgotPasswordValidation, NewPassword } from "@/pages/auth";
 
 const icon = {
     className: "w-5 h-5 text-inherit",
@@ -69,6 +69,12 @@ export const routes = [
                 name: "ForgotPasswordValidation",
                 path: "/forgotPasswordValidation",
                 element: <ForgotPasswordValidation />,
+            },
+            {
+                icon: <RectangleStackIcon {...icon} />,
+                name: "NewPassword",
+                path: "/newPassword",
+                element: <NewPassword />,
             },
         ],
     },

@@ -5,31 +5,26 @@ import { Link } from "react-router-dom";
 export function ForgotPasswordValidation() {
     const logo = <img src={emailValidation} alt="로고" width={120} height={120}></img>;
     return (
-        <section className="flex justify-center">
-            <div className="w-full lg:w-3/5 mt-24">
+        <section className="flex h-screen items-center justify-center ">
+            <div className="justify-center items-center">
                 <div className="text-center">
-                    <Typography variant="h2" className="font-bold mb-4">
-                        새로운 비밀번호 요청
-                    </Typography>
+                    <Typography className="font-semibold text-4xl">비밀번호를 확인해주세요.</Typography>
                 </div>
-                <form className="flex flex-col mt-8 mb-2 mx-auto w-96 max-w-screen-lg ">
-                    <div className="mb-1 flex flex-col gap-4 items-center">
+                <form className="mt-[85px] mx-auto">
+                    <div className="flex flex-col items-center">
                         {logo}
-                        <Typography variant="small" color="gray" className="-mb-3 font-medium" align="center">
-                            담당자에게 새로운 비밀번호 요청 메일이 발송 되었습니다.
-                            <br />
-                            잠시만 기다려주세요.
-                            <br />
-                            <br />
-                            <Typography variant="big" color="black" className="-mb-3 font-bold" align="center">
-                                가입 된 이메일 주소 : name@email.com
+                        <Typography className="text-[#777777] mt-[30px] font-medium text-2xl font-semibold" align="center">
+                            아래 계정으로 비밀번호가 발송 되었습니다.
+                            <Typography color="black" className="mt-[34px] mb-[34px] font-bold text-[28px] underline	" align="center">
+                                name@email.com
                             </Typography>
-                            <br />
                         </Typography>
-                        <Button className="mt-6 " fullWidth>
-                            비밀번호 재요청
-                        </Button>
                     </div>
+                    <Button className="mt-[40px] h-[48px] text-[20px]" fullWidth>
+                        <Link to="/auth/signIn" className="mt-[40px] h-[48px] text-[20px]" fullWidth>
+                            로그인 하러가기
+                        </Link>
+                    </Button>
                 </form>
             </div>
         </section>

@@ -40,6 +40,11 @@ export function Auth() {
             path: "/auth/ForgotPasswordValidation",
             icon: ArrowRightOnRectangleIcon,
         },
+        {
+            name: "NewPassword",
+            path: "/auth/NewPassword",
+            icon: ArrowRightOnRectangleIcon,
+        },
     ];
 
     return (
